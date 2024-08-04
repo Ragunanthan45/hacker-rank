@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s = input()
+upper, lower,odd, even  = [], [], [], []
+
+for ragu in s:
+    if ragu.isnumeric():
+        if int(ragu)%2 == 0:
+         even.append(ragu)
+        else:
+            odd.append(ragu)
+    else:
+        if ragu.isupper():
+            upper.append(ragu)
+        else:
+            lower.append(ragu)
+
+print(''.join(sorted(lower))+''.join(sorted(upper))+''.join(sorted(odd))+''.join(sorted(even)))
